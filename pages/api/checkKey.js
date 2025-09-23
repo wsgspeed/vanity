@@ -1,6 +1,6 @@
 let keyDatabase = {
-    "developer-kwmeah-oenajcu-3l9a8f4-vanity": null, 
-    "developer-ajwnfg-pwnahd-3n1s8g-vanity": null
+    "developer-kwmeah-oenajcu-3l9a8f4-obfuscater": null, // S_0
+    "developer-ajwnfg-pwnahd-3n1s8g-obfuscater": null // ROSARY
 };
 
 export default function handler(req, res) {
@@ -23,3 +23,4 @@ export default function handler(req, res) {
         return res.json({ result: 'macMismatch' });
     }
 }
+
