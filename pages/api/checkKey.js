@@ -1,26 +1,24 @@
 let keyDatabase = {
-    "developer-kwmeah-oenajcu-3l9a8f4-obfuscater": null, // S_0
-    "developer-ajwnfg-pwnahd-3n1s8g-obfuscater": null // ROSARY
+  "developer-kwmeah-oenajcu-3l9a8f5": false, // S_0
+  "developer-ajwnfg-pwnahd-3n1s8gf": false   // ROSARY
 };
 
 export default function handler(req, res) {
-    if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
-    const authHeader = req.headers['authorization'];
-    if (!authHeader || authHeader !== 'Bearer VanityStayTfUnTracable1824')
-        return res.status(401).json({ error: 'Unauthorized' });
+  const { key } = req.body;
 
-    const { key, mac } = req.body;
+  if (!key || typeof key !== 'string') {
+    return res.status(400).json({ error: 'Bad Request: missing or invalid key' });
+  }
 
-    if (!keyDatabase.hasOwnProperty(key)) return res.json({ result: 'Incorrect' });
+  if (!Object.prototype.hasOwnProperty.call(keyDatabase, key)) {
+    return res.json({ result: 'Incorrect' });
+  }
 
-    if (!keyDatabase[key]) {
-        keyDatabase[key] = mac;
-        return res.json({ result: 'validKey' });
-    } else if (keyDatabase[key] === mac) {
-        return res.json({ result: 'validKey' });
-    } else {
-        return res.json({ result: 'macMismatch' });
-    }
+  keyDatabase[key] = true;
+
+  return res.json({ result: 'validKey' });
 }
-
