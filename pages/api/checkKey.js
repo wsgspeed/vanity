@@ -5,7 +5,7 @@ let keyDatabase = {
   "vanity-sjffwjada-192fad74-fnaw35gfa": false, // name
   "vanity-rxqplmzsh-4b7c1d9e-zk2v8twh": false, // xen
   "vanity-qswdivelf-2a8k5r0b-hz9n4gxm": false, // bappo
-  "vanity-kdprlqvzm-7f3a9b2e-xn6t4wsy": false
+  "vanity-kdprlqvzm-7f3a9b2e-xn6t4wsy": false // policyterms
 };
 
 export default function handler(req, res) {
@@ -27,6 +27,7 @@ export default function handler(req, res) {
 
   return res.json({ result: 'validKey' });
 }
+
 
 
 
