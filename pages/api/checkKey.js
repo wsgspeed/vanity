@@ -1,6 +1,6 @@
 let keyDatabase = {
   "developer-kwmeah-oenajcu-3l9a8f5": false, // S_0
-  "developer-ajwnfg-pwnahd-3n1s8gf": false   // ROSARY
+  "developer-ajwnfg-pwnahd-3n1s8gf": false,   // ROSARY
   "vanity-sjffwjada-192fad74-fnaw35gfa": false // name
 };
 
@@ -23,4 +23,5 @@ export default function handler(req, res) {
 
   return res.json({ result: 'validKey' });
 }
+
 
