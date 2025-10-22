@@ -7,6 +7,7 @@ let keyDatabase = {
   "vanity-qswdivelf-2a8k5r0b-hz9n4gxm": false, // bappo
   "vanity-kdprlqvzm-7f3a9b2e-xn6t4wsy": false, // policyterms
   "vanity-jqtrbnsfv-5c8d1e7a-ly4k9mzp": false, // ember
+  "vanity-mqzrvbctl-3f7a9d2k-px6w1nsy": false, // wizzy
 };
 
 export default function handler(req, res) {
@@ -28,6 +29,7 @@ export default function handler(req, res) {
 
   return res.json({ result: 'validKey' });
 }
+
 
 
 
